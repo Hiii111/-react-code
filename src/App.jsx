@@ -1,7 +1,4 @@
 // import { useState } from "react";
-
-import { useState } from "react";
-
 // function App(){
 //   const[fruit, setFruit]=useState("Apple");
 //   function handleFruit(){
@@ -31,6 +28,8 @@ import { useState } from "react";
 //   )
 // }
 // export default App;
+
+
 
 //   import { useState } from 'react'
 
@@ -94,17 +93,27 @@ import { useState } from "react";
 
 // export default App;
 
+// function App(){
+//   const[val, setVal]=useState("");
+//   const handleEvent=(event)=>{
+//     setVal(event.target.value);
+//   }
+//   return(
+//     <div>
+//         <h1>Input Field Value With onChange Event</h1>
+//         <input type="text" value={val} onChange={handleEvent} placeholder="Enter Something.." />
+//         <h2>{val}</h2>
+//         <button onClick={()=>setVal("")}>Clear Value</button>
+//     </div>
+//   )
+// }
+
+import Home from "./Home";
+
 function App(){
-  const[val, setVal]=useState("");
-  const handleEvent=(event)=>{
-    setVal(event.target.value);
-  }
   return(
     <div>
-        <h1>Input Field Value With onChange Event</h1>
-        <input type="text" value={val} onChange={handleEvent} placeholder="Enter Something.." />
-        <h2>{val}</h2>
-        <button onClick={()=>setVal("")}>Clear Value</button>
+       <Home />
     </div>
   )
 }
