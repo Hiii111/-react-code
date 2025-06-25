@@ -30,34 +30,56 @@
 // }
 // export default App;
 
-  import { useState } from 'react'
+//   import { useState } from 'react'
 
-  function App(){
-    const[toggle, setToggle]=useState(false);
-    function handleToggle(){
-      setToggle(!toggle);
-    }
-    return(
-      <div>
-      <button onClick={handleToggle}>
-        {toggle ? (
-            <img 
-            src="https://cdn-icons-png.flaticon.com/512/1828/1828595.png" 
-            alt="Hide Icon" 
-            style={{ width: '20px', height: '20px' }}
-          />
-        ) : (
-          <img 
-            src="https://cdn-icons-png.flaticon.com/512/1828/1828724.png" 
-            alt="Hide Icon" 
-            style={{ width: '20px', height: '20px' }}
-          />
-        )}
-</button>
-        { toggle ?<h1>Hello</h1> : null }
+//   function App(){
+//     const[toggle, setToggle]=useState(false);
+//     function handleToggle(){
+//       setToggle(!toggle);
+//     }
+//     return(
+//       <div>
+//       <button onClick={handleToggle}>
+//         {toggle ? (
+//             <img 
+//             src="https://cdn-icons-png.flaticon.com/512/1828/1828595.png" 
+//             alt="Hide Icon" 
+//             style={{ width: '20px', height: '20px' }}
+//           />
+//         ) : (
+//           <img 
+//             src="https://cdn-icons-png.flaticon.com/512/1828/1828724.png" 
+//             alt="Hide Icon" 
+//             style={{ width: '20px', height: '20px' }}
+//           />
+//         )}
+// </button>
+//         { toggle ?<h1>Hello</h1> : null }
       
-      </div>
-    )
-  }
+//       </div>
+//     )
+//   }
 
+// export default App;
+
+// multiple condition with state
+
+import { useState } from "react";
+
+function App(){
+  const[count, setCount]=useState(0);
+  function handleCounter(){
+    setCount(count + 1);
+  }
+  return(
+    <div>
+      <h1>Count <sup> ({count})</sup></h1>
+      <button onClick={handleCounter}>Change Number</button>
+      {count == 0 ? <h1>Condition 0 Working Now</h1> 
+      :count == 1 ? <h1>Condition 1 Working Now</h1>  
+      :count == 2 ? <h1>Condition 2 Working Now</h1> : <h1>Other Condition Working Now</h1>
+    }
+    </div>
+  )
+}
 export default App;
