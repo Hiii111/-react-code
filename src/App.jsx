@@ -1,54 +1,31 @@
+import { useState } from "react";
 
-
-
-function App() {
-  const name = "Amit Kumar";
-  let x=10;
-  let y=20;
-  function fruits()
-  {
-    return "Apple";
+function App(){
+  const[fruit, setFruit]=useState("Apple");
+  function handleFruit(){
+    setFruit("Banana");
   }
-  function sum(a,b)
-  {
-    return a+b;
+  const[count, setCount]=useState(0);
+  function handleCount(){
+    setCount(count + 1);
   }
-  function operation(a,b,op)
-  {
-    if(op=="+"){
-      return a+b;
-    }else if(op=="-"){
-      return a-b;
-    }else if(op=="*"){
-      return a*b;
-    }else{
-      return "Unmached Condition";
-    }
+  const[dcount, setDcount]=useState(10);
+  function handleDcount(){
+      if(dcount > 0){
+        setDcount(dcount - 1);
+      }else{
+        setDcount("You Can't");
+      }
   }
-  const userObj = {
-    name : 'Anil Nishad',
-    email : 'anil@gmail.com',
-    age : 20
-  }
-
-  const userData = ['anil', 'anil@gmail.com', 30];
-
-  return (
+  return(
     <div>
-     <h1>{name?name:"User Not Found"}</h1>
-     <h1>{x+y}</h1>
-     <h1> {fruits()} </h1>
-     <h1>{sum(10,10)}</h1>
-     <h1>{operation(10,10,"*")}</h1>
-     <h1>{userObj.name}</h1>
-     <h1>{userObj.email}</h1>
-     <h1>{userObj.age}</h1>
-     <h1>{userData[0]}</h1>
-     <h1>{userData[1]}</h1>
-     <h1>{userData[2]}</h1>
-     
+      <h1>{fruit}</h1>
+      <button onClick={handleFruit}> Click for chnage fruit name </button>
+      <h2>Increase Count : {count}</h2>
+      <button onClick={handleCount}>Increase Count +</button>
+      <h3>Decrease Count : {dcount}</h3>
+      <button onClick={handleDcount}>Decrease Count - </button>
     </div>
-  );
+  )
 }
-
 export default App;
