@@ -108,12 +108,14 @@
 //   )
 // }
 
+import Checkboxes from "./Checkboxes";
 import Home from "./Home";
 
 function App(){
   return(
     <div>
        <Home />
+       <Checkboxes />
     </div>
   )
 }
