@@ -1,5 +1,7 @@
 // import { useState } from "react";
 
+import { useState } from "react";
+
 // function App(){
 //   const[fruit, setFruit]=useState("Apple");
 //   function handleFruit(){
@@ -64,21 +66,45 @@
 
 // multiple condition with state
 
-import { useState } from "react";
+// import { useState } from "react";
+
+// function App(){
+//   const[count, setCount]=useState(0);
+//   function handleCounter(){
+//     setCount(count + 1);
+//   }
+//   return(
+//     <div>
+//       <h1>Count <sup> ({count})</sup></h1>
+//       <button onClick={handleCounter}>Change Number</button>
+//       {count == 0 ? <h1>Condition 0 Working Now</h1> 
+//       :count == 1 ? <h1>Condition 1 Working Now</h1>  
+//       :count == 2 ? <h1>Condition 2 Working Now</h1> : <h1>Other Condition Working Now</h1>
+//     }
+//     </div>
+//   )
+// }
+// export default App;
+
+// function App(props){
+//   return(
+//     <h1>Hello, {props.name} Email  {props.email} </h1>
+//   )
+// }
+
+// export default App;
 
 function App(){
-  const[count, setCount]=useState(0);
-  function handleCounter(){
-    setCount(count + 1);
+  const[val, setVal]=useState("");
+  const handleEvent=(event)=>{
+    setVal(event.target.value);
   }
   return(
     <div>
-      <h1>Count <sup> ({count})</sup></h1>
-      <button onClick={handleCounter}>Change Number</button>
-      {count == 0 ? <h1>Condition 0 Working Now</h1> 
-      :count == 1 ? <h1>Condition 1 Working Now</h1>  
-      :count == 2 ? <h1>Condition 2 Working Now</h1> : <h1>Other Condition Working Now</h1>
-    }
+        <h1>Input Field Value With onChange Event</h1>
+        <input type="text" value={val} onChange={handleEvent} placeholder="Enter Something.." />
+        <h2>{val}</h2>
+        <button onClick={()=>setVal("")}>Clear Value</button>
     </div>
   )
 }
