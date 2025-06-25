@@ -109,13 +109,13 @@
 // }
 
 import Checkboxes from "./Checkboxes";
+import DropdownRadioButton from "./DropdownRadioButton";
 import Home from "./Home";
 
 function App(){
   return(
     <div>
-       <Home />
-       <Checkboxes />
+      <DropdownRadioButton />
     </div>
   )
 }
