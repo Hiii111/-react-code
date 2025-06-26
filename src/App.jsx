@@ -111,11 +111,12 @@
 import Checkboxes from "./Checkboxes";
 import DropdownRadioButton from "./DropdownRadioButton";
 import Home from "./Home";
+import Loop from "./Loop";
 
 function App(){
   return(
     <div>
-      <DropdownRadioButton />
+      <Loop />
     </div>
   )
 }
