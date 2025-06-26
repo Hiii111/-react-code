@@ -1,3 +1,5 @@
+import ReuseComonentInLoop from "./ReuseComonentInLoop";
+
 function Loop() {
   const studentData = [
     {
@@ -28,26 +30,14 @@ function Loop() {
 
   return (
     <div>
-      <table border="1" cellPadding="10">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Mobile Number</th>
-          </tr>
-        </thead>
-        <tbody>
-          {studentData.map((student) => (
-            <tr key={student.id}>
-              <td>{student.id}</td>
-              <td>{student.name}</td>
-              <td>{student.email}</td>
-              <td>{student.mobile}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        <h1>Reuse Component In Loop</h1>
+        {
+            studentData.map((user)=>(
+                <div key={user.id}>
+                   <ReuseComonentInLoop data={user} />
+                </div>
+            ))
+        }
     </div>
   );
 }
