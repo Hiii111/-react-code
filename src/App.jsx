@@ -112,12 +112,13 @@ import Checkboxes from "./Checkboxes";
 import DropdownRadioButton from "./DropdownRadioButton";
 import Home from "./Home";
 import Loop from "./Loop";
+import Card from "./Card";
 import NestedLoop from "./NestedLoop";
 
 function App(){
   return(
     <div>
-      <NestedLoop />
+      <Card />
     </div>
   )
 }
