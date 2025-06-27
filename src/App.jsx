@@ -115,11 +115,12 @@ import Loop from "./Loop";
 import Card from "./Card";
 import NestedLoop from "./NestedLoop";
 import ExternalCss from "./externalCss";
+import ReactBootstrap from "./ReactBootrap";
 
 function App(){
   return(
     <div>
-      <ExternalCss/>
+      <ReactBootstrap/>
     </div>
   )
 }
