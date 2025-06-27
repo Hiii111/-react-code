@@ -116,11 +116,12 @@ import Card from "./Card";
 import NestedLoop from "./NestedLoop";
 import ExternalCss from "./externalCss";
 import ReactBootstrap from "./ReactBootrap";
+import UncontrolledComponent from "./uncontrolledComponent";
 
 function App(){
   return(
-    <div>
-      <ReactBootstrap/>
+    <div> 
+      <UncontrolledComponent />
     </div>
   )
 }
