@@ -114,11 +114,12 @@ import Home from "./Home";
 import Loop from "./Loop";
 import Card from "./Card";
 import NestedLoop from "./NestedLoop";
+import ExternalCss from "./externalCss";
 
 function App(){
   return(
     <div>
-      <Card />
+      <ExternalCss/>
     </div>
   )
 }
