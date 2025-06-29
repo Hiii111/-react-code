@@ -108,22 +108,36 @@
 //   )
 // }
 
-import Checkboxes from "./Checkboxes";
-import DropdownRadioButton from "./DropdownRadioButton";
-import Home from "./Home";
-import Loop from "./Loop";
-import Card from "./Card";
-import NestedLoop from "./NestedLoop";
-import ExternalCss from "./externalCss";
-import ReactBootstrap from "./ReactBootrap";
-import UncontrolledComponent from "./uncontrolledComponent";
-import UseTransition from "./UseTransition";
+// import Checkboxes from "./Checkboxes";
+// import DropdownRadioButton from "./DropdownRadioButton";
+// import Home from "./Home";
+// import Loop from "./Loop";
+// import Card from "./Card";
+// import NestedLoop from "./NestedLoop";
+// import ExternalCss from "./externalCss";
+// import ReactBootstrap from "./ReactBootrap";
+// import UncontrolledComponent from "./uncontrolledComponent";
+// import UseTransition from "./UseTransition";
+// import UseDrived from "./UseDrived";
 
-function App(){
-  return(
-    <div> 
-      <UseTransition />
+// function App(){
+//   return(
+//     <div> 
+//       <UseDrived />
+//     </div>
+//   )
+// }
+// export default App;
+
+import React from 'react';
+import TemperatureConverter from './components/TemperatureConverter';
+
+function App() {
+  return (
+    <div style={{ padding: 30 }}>
+      <h2>🌡️ Temperature Converter</h2>
+      <TemperatureConverter />
     </div>
-  )
+  );
 }
 export default App;
