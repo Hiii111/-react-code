@@ -117,11 +117,12 @@ import NestedLoop from "./NestedLoop";
 import ExternalCss from "./externalCss";
 import ReactBootstrap from "./ReactBootrap";
 import UncontrolledComponent from "./uncontrolledComponent";
+import UseTransition from "./UseTransition";
 
 function App(){
   return(
     <div> 
-      <UncontrolledComponent />
+      <UseTransition />
     </div>
   )
 }
