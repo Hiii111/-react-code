@@ -133,11 +133,12 @@ import React from 'react';
 import TemperatureConverter from './components/TemperatureConverter';
 import UseActionState from './UseActionState';
 import UseId from './UseId';
+import Fragment from './Fragment';
 
 function App() {
   return (
     <div>
-      <UseId />
+      <Fragment />
     </div>
   );
 }
