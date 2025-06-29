@@ -131,12 +131,13 @@
 
 import React from 'react';
 import TemperatureConverter from './components/TemperatureConverter';
+import UseActionState from './UseActionState';
+import UseId from './UseId';
 
 function App() {
   return (
-    <div style={{ padding: 30 }}>
-      <h2>🌡️ Temperature Converter</h2>
-      <TemperatureConverter />
+    <div>
+      <UseId />
     </div>
   );
 }
