@@ -29,6 +29,12 @@
 // }
 // export default App;
 
+import { useState } from "react";
+import College from "./College";
+import { SubjectContext } from "./ContextData";
+
+
+
 
 
 //   import { useState } from 'react'
@@ -129,17 +135,38 @@
 // }
 // export default App;
 
-import React from 'react';
-import TemperatureConverter from './components/TemperatureConverter';
-import UseActionState from './UseActionState';
-import UseId from './UseId';
-import Fragment from './Fragment';
+// import React from 'react';
+// import TemperatureConverter from './components/TemperatureConverter';
+// import UseActionState from './UseActionState';
+// import UseId from './UseId';
+// import Fragment from './Fragment';
 
-function App() {
-  return (
-    <div>
-      <Fragment />
+// function App() {
+//   return (
+//     <div>
+//       <Fragment />
+//     </div>
+//   );
+// }
+// export default App;
+
+function App(){
+  const[subject, setSubject]=useState("English");
+  return(
+    <div style={{backgroundColor: 'yellow', padding: '10px'}}>
+        <SubjectContext.Provider value={subject}>
+          <select value={subject} onChange={(event)=>setSubject(event.target.value)}>
+              <option value="">Select Subject</option>
+              <option value="Hindi">Hindi</option>
+              <option value="English">English</option>
+              <option value="Math">Math</option>
+              <option value="Urdu">Urdu</option>
+          </select> &nbsp;
+          <button onClick={()=>setSubject("")}>Clear Subject</button>
+            <h1>Context API</h1>
+            <College/>
+        </SubjectContext.Provider>
     </div>
-  );
+  )
 }
 export default App;
